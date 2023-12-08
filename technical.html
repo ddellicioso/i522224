@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Technical Skills •°. *࿐</title>
+</head>
+<body>
+    <div class="diary">
+        <div class="page" id="page1" style="display: block;">
+            <img src="./images/tech-week10.png" alt="Page 1">
+                <div class="image-1-detail">
+                    <img src="./images/IMG_1784.PNG">
+                </div>
+                <div class="image-2-detail">
+                    <img src="./images/IMG_1783 (1).PNG">
+                </div>
+                <div class="image-3-detail">
+                    <img src="./images/Screenshot 2023-12-01 103225.png">
+                </div>
+            <div class="navigation">
+                <button onclick="showPage(2)" class="button">Next</button>
+            </div>
+        </div>
+
+
+        <div class="page" id="page2">
+            <img src="./images/tech-week11.png" alt="Page 2">
+            <div class="image11-1-detail">
+                <img src="./images/javascript.png">
+            </div>
+            <div class="image11-2-detail">
+                <img src="./images/homehtml.png">
+            </div>
+            <div class="image11-3-detail">
+                <img src="./images/technicalhtml.png">
+            </div>
+            <div class="image11-4-detail">
+                <img src="./images/roomhtml.png">
+            </div>
+            <div class="image11-5-detail">
+                <img src="./images/aboutmehtml.png">
+            </div>
+
+
+            <div class="navigation">
+                <button onclick="showPage(1)" class="button">Previous</button>
+                <button onclick="showPage(3)" class="button">Next</button>
+            </div>
+        </div>
+
+
+
+        <div class="page" id="page3">
+            <img src="./images/tech-week12.png" alt="Page 3">
+            <div class="image12-1-detail">
+                <img src="./images/Screenshot (145).png">
+            </div>
+            <div class="image12-2-detail">
+                <img src="./images/Screenshot (146).png">
+            </div>
+            <div class="image12-3-detail">
+                <img src="./images/Screenshot (147).png">
+            </div>
+            <div class="image12-4-detail">
+                <img src="./images/Screenshot (148).png">
+            </div>
+
+            <div class="navigation">
+                <button onclick="showPage(2)" class="button">Previous</button>
+                <button onclick="showPage(3)" class="button">Next</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function showPage(pageNumber) {
+            // Hide all pages
+            var pages = document.querySelectorAll('.page');
+            pages.forEach(function(page) {
+                page.style.display = 'none';
+            });
+
+            // Show the selected page
+            var selectedPage = document.getElementById('page' + pageNumber);
+            selectedPage.style.display = 'block';
+        }
+
+        // Call showPage to ensure only the first page is displayed initially
+        showPage(1);
+    </script>
+    <a href="home.html" class="button">Home</a>
+    <a href="room.html" class="button">Room</a>
+    <a href="Tech-LO.html" class="button">Learning Outcomes</a>
+</body>
+</html>
