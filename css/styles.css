@@ -16,32 +16,6 @@ body {
     min-width: 800px;
 }
 
-.diary {
-    width: 80%;
-    margin: 40px auto;
-    overflow: hidden; /* Hide overflowing content */
-}
-
-.page {
-    display: none;
-}
-
-.page:target {
-    display: block;
-}
-
-img {
-    width: 80%;
-    height: auto;
-    margin-left: 10%;
-    /* margin-right: auto; */
-}
-
-.navigation {
-    margin-top: 1px;
-    text-align: center;
-}
-
 .button {
     display: inline-block;
     padding: 10px;
@@ -107,16 +81,17 @@ p {
 .button {
     display: inline-block;
     padding: 5px 5px;
-    background-color: #AD4D47;
-    color: #fff;
+    background-color: #ffffff7b;
+    color: #8a3434;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
 .button:hover {
-    background-color: #87645A;
+    background-color: #9a90904c;
 }
+
 
 .background-img {
     position: relative;
@@ -186,238 +161,16 @@ p {
     height: auto;
 }
 
-/* page */
-
-.image-1-detail {
-    position: absolute;
-    top: 57%;
-    left: 50%;
-    width: 21%; /* Adjust the width as needed */
-    z-index: 2; /* Place it above the main image */
-    transition: transform 0.3s; /* Add a smooth transition effect */
-  }
-
-  .image-1-detail:hover {
-    transform: scale(3); /* Adjust the scale as needed */
-  }
-
-  .images-1-detail img {
-    width: 100%;
-    height: auto;
-  }
 
 
-  .image-2-detail {
-    position: absolute;
-    top: 27%;
-    left: 60%;
-    width: 21%; /* Adjust the width as needed */
-    transition: transform 0.3s; /* Add a smooth transition effect */
-  }
+.picture-wall img {
+  margin-top: 5%;
+  margin-left: 80%;
+  width: 10%;
+  transition: transform 0.4s;
+}
 
-  .image-2-detail:hover {
-    transform: scale(3); /* Adjust the scale as needed */
-    z-index: 2;
-  }
+.picture-wall img:hover {
+  transform: scale(4);
 
-  .images-2-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-  .image-3-detail {
-    position: absolute;
-    top: 30%;
-    left: 35%;
-    width: 16.5%; /* Adjust the width as needed */
-    z-index: 1; /* Place it above the main image */
-    transition: transform 0.3s; /* Add a smooth transition effect */
-  }
-
-  .image-3-detail:hover {
-    transform: scale(3); /* Adjust the scale as needed */
-    z-index: 2;
-  }
-
-  .images-3-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-
-  .image11-1-detail {
-    position: absolute;
-    top: 44.5%;
-    left: 28.4%;
-    width: 23%;
-    transition: transform 0.3s;
-    z-index: 0;
-  }
-
-  .image11-1-detail:hover {
-    transform: scale(3); 
-    z-index: 2;/* Adjust the scale as needed */
-  }
-
-  .images11-1-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-  .image11-2-detail {
-    position: absolute;
-    top: 28%;
-    left: 49%;
-    width: 18%;
-    transition: transform 0.3s;
-  }
-
-  .image11-2-detail:hover {
-    transform: scale(3.5);
-    z-index: 2; /* Adjust the scale as needed */
-  }
-
-  .images11-2-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-
-  .image11-3-detail {
-    position: absolute;
-    top: 26.8%;
-    left: 66%;
-    width: 15%;
-    transition: transform 0.3s;
-  }
-
-  .image11-3-detail:hover {
-    transform: scale(3.5); 
-    z-index: 2;/* Adjust the scale as needed */
-  }
-
-  .images11-3-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-
-  .image11-4-detail {
-    position: absolute;
-    top: 58.5%;
-    left: 49.6%;
-    width: 14.9%;
-    transition: transform 0.3s;
-  }
-
-  .image11-4-detail:hover {
-    transform: scale(3.5);
-    z-index: 2;/* Adjust the scale as needed */
-  }
-
-  .images11-4-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-  .image11-5-detail {
-    position: absolute;
-    top: 58.4%;
-    left: 62%;
-    width: 21%;
-    transition: transform 0.3s;
-  }
-
-  .image11-5-detail:hover {
-    transform: scale(3.5); /* Adjust the scale as needed */
-  }
-
-  .images11-5-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-
-
-.image12-1-detail {
-    position: absolute;
-    top: 38%;
-    left: 48%;
-    width: 20%;
-    transition: transform 0.3s;
-  }
-
-  .image12-1-detail:hover {
-    transform: scale(3.5); 
-    z-index: 2;
-  }
-
-  .images12-1-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-
-  .image12-2-detail {
-    position: absolute;
-    top: 52.6%;
-    left: 48%;
-    width: 20%;
-    transition: transform 0.3s;
-  }
-
-  .image12-2-detail:hover {
-    transform: scale(3.5);
-    z-index: 2;
-  }
-
-  .images12-2-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-
-  .image12-3-detail {
-    position: absolute;
-    top: 29.7%;
-    left: 65%;
-    width: 17%;
-    transition: transform 0.3s;
-  }
-
-  .image12-3-detail:hover {
-    transform: scale(3.5);
-    z-index: 2; 
-  }
-
-  .images12-3-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-  .image12-4-detail {
-    position: absolute;
-    top: 52.6%;
-    left: 65%;
-    width: 15%;
-    transition: transform 0.3s;
-  }
-
-  .image12-4-detail:hover {
-    transform: scale(3.5); 
-  }
-
-  .images12-4-detail img {
-    width: 100%;
-    height: auto;
-  }
+}

@@ -1,0 +1,303 @@
+@font-face {
+    font-family: 'EB Garamond';
+    src: url("/fonts/EB_Garamond/EBGaramond-VariableFont_wght.ttf");
+}
+
+body {
+    font-family: 'EB Garamond', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("/images/background2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+    min-height: 600px; /* Adjust the minimum height as needed */
+    min-width: 800px;
+}
+
+.diary {
+    width: 70%;
+    margin: 20px auto;
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.page {
+    display: none;
+}
+
+.page:target {
+    display: block;
+}
+
+img {
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    /* margin-right: auto; */
+}
+
+.navigation {
+    margin-top: 1px;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 5px 5px;
+    background-color: #ffffff7b;
+    color: #8a3434;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #9a90904c;
+}
+
+.nav-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 25%;
+        
+}
+
+
+/* page */
+
+.image-1-detail {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 19%; /* Adjust the width as needed */
+    z-index: 2; /* Place it above the main image */
+    transition: transform 0.3s; /* Add a smooth transition effect */
+  }
+
+  .image-1-detail:hover {
+    transform: scale(3); /* Adjust the scale as needed */
+  }
+
+  .images-1-detail img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  .image-2-detail {
+    position: absolute;
+    top: 28%;
+    left: 58%;
+    width: 19%; /* Adjust the width as needed */
+    transition: transform 0.3s; /* Add a smooth transition effect */
+  }
+
+  .image-2-detail:hover {
+    transform: scale(3); /* Adjust the scale as needed */
+    z-index: 2;
+  }
+
+  .images-2-detail img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  .image-3-detail {
+    position: absolute;
+    top: 31%;
+    left: 36.5%;
+    width: 16%; /* Adjust the width as needed */
+    z-index: 1; /* Place it above the main image */
+    transition: transform 0.3s; /* Add a smooth transition effect */
+  }
+
+  .image-3-detail:hover {
+    transform: scale(3); /* Adjust the scale as needed */
+    z-index: 2;
+  }
+
+  .images-3-detail img {
+    width: 100%;
+    height: auto;
+  }
+
+
+
+  .image11-1-detail {
+    position: absolute;
+    top: 43%;
+    left: 31%;
+    width: 21%;
+    transition: transform 0.3s;
+    z-index: 0;
+  }
+
+  .image11-1-detail:hover {
+    transform: scale(3); 
+    z-index: 2;/* Adjust the scale as needed */
+  }
+
+  .images11-1-detail img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  .image11-2-detail {
+    position: absolute;
+    top: 25%;
+    left: 49%;
+    width: 16%;
+    transition: transform 0.3s;
+  }
+
+  .image11-2-detail:hover {
+    transform: scale(3.5);
+    z-index: 2; /* Adjust the scale as needed */
+  }
+
+  .images11-2-detail img {
+    width: 100%;
+    height: auto;
+  }
+
+
+
+  .image11-3-detail {
+    position: absolute;
+    top: 24.5%;
+    left: 64%;
+    width: 14%;
+    transition: transform 0.3s;
+  }
+
+  .image11-3-detail:hover {
+    transform: scale(3.5); 
+    z-index: 2;/* Adjust the scale as needed */
+  }
+
+  .images11-3-detail img {
+    width: 100%;
+    height: auto;
+  }
+
+
+
+  .image11-4-detail {
+    position: absolute;
+    top: 53%;
+    left: 49.6%;
+    width: 13%;
+    transition: transform 0.3s;
+  }
+
+  .image11-4-detail:hover {
+    transform: scale(3.5);
+    z-index: 2;/* Adjust the scale as needed */
+  }
+
+  .images11-4-detail img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  .image11-5-detail {
+    position: absolute;
+    top: 53%;
+    left: 62%;
+    width: 16%;
+    transition: transform 0.3s;
+  }
+
+  .image11-5-detail:hover {
+    transform: scale(3.5); /* Adjust the scale as needed */
+  }
+
+  .images11-5-detail img {
+    width: 100%;
+    height: auto;
+  }
+
+
+
+
+.image12-1-detail {
+    position: absolute;
+    top: 38%;
+    left: 48%;
+    width: 18%;
+    transition: transform 0.3s;
+  }
+
+  .image12-1-detail:hover {
+    transform: scale(3.5); 
+    z-index: 2;
+  }
+
+  .images12-1-detail img {
+    width: 100%;
+    height: auto;
+  }
+
+
+
+  .image12-2-detail {
+    position: absolute;
+    top: 52.6%;
+    left: 48%;
+    width: 18%;
+    transition: transform 0.3s;
+  }
+
+  .image12-2-detail:hover {
+    transform: scale(3.5);
+    z-index: 2;
+  }
+
+  .images12-2-detail img {
+    width: 100%;
+    height: auto;
+  }
+
+
+
+  .image12-3-detail {
+    position: absolute;
+    top: 29.7%;
+    left: 63%;
+    width: 16%;
+    transition: transform 0.3s;
+  }
+
+  .image12-3-detail:hover {
+    transform: scale(3.5);
+    z-index: 2; 
+  }
+
+  .images12-3-detail img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  .image12-4-detail {
+    position: absolute;
+    top: 52.6%;
+    left: 63%;
+    width: 15%;
+    transition: transform 0.3s;
+  }
+
+  .image12-4-detail:hover {
+    transform: scale(3.5); 
+  }
+
+  .images12-4-detail img {
+    width: 100%;
+    height: auto;
+  }
