@@ -1,45 +1,69 @@
-@font-face {
-    font-family: 'EB Garamond';
-    src: url("/fonts/EB_Garamond/EBGaramond-VariableFont_wght.ttf");
+* {
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-family: 'EB Garamond', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url("../images/background2.jpg");
-    background-size: cover;
-    background-position: center;
+    background-image: url("../images/background.jpeg");
     background-repeat: no-repeat;
-    display: block;
-    min-height: 600px; /* Adjust the minimum height as needed */
-    min-width: 800px;
+    background-size: 100%;
+}
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 500px;
+    width: 700px;
+    background: pink;
+    transform: translate(-50%, -50%);
+    border: 1px solid #fff;
+    overflow: hidden;
 }
 
-.diary {
-    width: 70%;
-    margin: 20px auto;
-    overflow: hidden; /* Hide overflowing content */
+.navigator{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%);
 }
-
-.page {
-    display: none;
+.navigator .bar {
+    height: 5px;
+    width: 45px;
+    background: #100f0f;
+    cursor: pointer;
+    border: 2px solid black;
+    margin-left: 8px;
+    box-shadow: 2px 2px 6px #fff, -2px -2px 6px #fff;
 }
-
-.page:target {
-    display: block;
+.navigator .bar:hover{
+    background: #fff;
+}
+input[type="radio"]{
+    position: absolute;
+    visibility: hidden;
+}
+.slides{
+    display: flex;
+    height: 100%;
+    width: 500%;
 }
 
 img {
-    width: 80%;
-    height: auto;
-    margin-left: 10%;
-    /* margin-right: auto; */
+    width: 100%;
+    height: 100%;
 }
 
-.navigation {
-    margin-top: 1px;
-    text-align: center;
+.image {
+    width: 20%;
+    transition: 0.4s ease;
+}
+
+#btn1:checked ~ .first{
+    margin-left: 0;
+}
+#btn2:checked ~ .first{
+    margin-left: -20%;
 }
 
 .button {
@@ -60,7 +84,38 @@ img {
     display: flex;
     justify-content: space-between;
     width: 50%;
-    margin-top: 20px;
-    margin-left: 25%;
+    margin-top: 3%;
+    margin-left: 40%;
         
 }
+
+
+/* @media only screen and (min-width:768px) {
+    body {
+        background-size: 200%;
+    }
+
+    .container {
+        top: 50%;
+        width: 600px;
+        height: 400px;
+    }
+}
+
+@media only screen and (min-width: 1080px) {
+    body {
+        background-size: 100%;
+    }
+    .week10 {
+    position: absolute;
+    width: 21%;
+    top: 31%;
+    left: 29%;
+    transition: 0.4s ease;
+    }
+
+    .week10:hover {
+        transform: scale(3.5); 
+        z-index: 2;
+    }
+} */

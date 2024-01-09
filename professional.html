@@ -11,20 +11,32 @@
         <a href="home.html" class="button">Home</a>
     </div>
 
-    <div class="diary">
-        <div class="page" id="page1" style="display: block;">
-            <img src="./images/profLO1.png" alt="Page 1">
+    <div class="container">
+        <div class="slides">
+            <input type="radio" name="common" id="btn1" checked>
+            <input type="radio" name="common" id="btn2">
 
+            <div class="image first">
+               <img src="./images/profLO1.png" alt="Page 1">
+            </div>
+            <div class="image">
+                <img src="./images/profLO2.png">
+            </div>
                 
-            <div class="navigation">
+            
+            <div class="navigator">
+                <label for="btn1" class="bar"></label>
+                <label for="btn2" class="bar"></label>
+            </div>
+            <!-- <div class="navigation">
                 <button onclick="showPage(2)" class="button">Previous</button>
                 <span style="margin: 0 370px;"></span>
                 <button onclick="showPage(2)" class="button">Next</button>
-            </div>
+            </div> -->
         </div>
     </div>
 
-    <div class="diary">
+    <!-- <div class="diary">
         <div class="page" id="page2" style="display: block;">
             <img src="./images/profLO2.png" alt="Page 2">
             
@@ -35,10 +47,10 @@
                 <button onclick="showPage(1)" class="button">Next</button>
             </div>
         </div>
-    </div>
+    </div> -->
     
     
-    <script>
+    <!-- <script>
         function showPage(pageNumber) {
             // Hide all pages
             var pages = document.querySelectorAll('.page');
@@ -53,6 +65,6 @@
 
         // Call showPage to ensure only the first page is displayed initially
         showPage(1);
-    </script>
+    </script> -->
 </body>
 </html>

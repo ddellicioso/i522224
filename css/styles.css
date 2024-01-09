@@ -83,7 +83,7 @@ p {
 .professional a {
     color: #C88F98;
     position: fixed; 
-    top: 28%;
+    top: 84%;
     left: 32.5%;
     transform: translate(-50%, -50%);
     font-size: 1.5vw;
@@ -93,7 +93,7 @@ p {
 .technical a {
     color: #C88F98;
     position: fixed; /* Fixed position */
-    top: 30.5%;
+    top: 91.5%;
     right: 25%;
     transform: translate(-50%, -50%);
     font-size: 1.5vw;
@@ -103,7 +103,7 @@ p {
 .sources a {
     color: #C88F98;
     position: fixed; /* Fixed position */
-    top: 13%;
+    top: 39%;
     right: 41.5%;
     transform: translate(-50%, -50%);
     font-size: 1.5vw;
@@ -113,7 +113,7 @@ p {
 .about-me a {
     color: #C88F98;
     position: fixed; /* Fixed position */
-    top: 26%;
+    top: 78%;
     right: 3%;
     transform: translate(-50%, -50%);
     font-size: 1.5vw;
@@ -143,8 +143,8 @@ p {
 
 }
 
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
     .professional a { 
         top: 80%;
     }
-}
+} */
