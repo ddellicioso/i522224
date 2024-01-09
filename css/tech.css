@@ -8,7 +8,7 @@ body {
     margin: 0;
     padding: 0;
     background-image: url("../images/background2.jpg");
-    background-size: 650%;
+    background-size: 600%;
     background-position: center;
     background-repeat: no-repeat;
     display: block;
@@ -68,7 +68,7 @@ img {
 
 /* page */
 
-/* .image-1-detail {
+.image-1-detail {
     position: absolute;
     top: 55%;
     left: 50%;
@@ -216,6 +216,7 @@ img {
 
   .image11-5-detail:hover {
     transform: scale(3.5); 
+  }
 
   .images11-5-detail img {
     width: 100%;
@@ -482,4 +483,4 @@ img {
   .images14-4-detail img {
     width: 100%;
     height: auto;
-  } */
+  }
