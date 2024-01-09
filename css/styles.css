@@ -8,15 +8,14 @@ body {
     margin: 0;
     padding: 0;
     background-image: url("../images/background2.jpg");
-    background-size: cover;
-    background-position: center;
+    background-size: 100%;
     background-repeat: no-repeat;
     display: block;
-    min-height: 600px; /* Adjust the minimum height as needed */
-    min-width: 800px;
+    min-height: 600px;
+    min-width: 800px; 
 }
 
-.button {
+/* .button {
     display: inline-block;
     padding: 10px;
     margin: 0 10px;
@@ -26,7 +25,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
+} */
 
 .button:hover {
     background-color: #555;
@@ -46,33 +45,6 @@ body {
     margin-top: 3%;
 }
 
-.content {
-    position: absolute;
-    top: 350px;
-    left: 745px;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    overflow-y: auto; /* Allow vertical scrolling */
-    max-height: calc(95vh - 270px); 
-    -webkit-overflow-scrolling: touch;
-    overflow: -moz-scrollbars-none;
-}
-.content::-webkit-scrollbar {
-    width: 8px; /* Adjust the width as needed */
-}
-.content::-webkit-scrollbar-thumb {
-    background-color: transparent; /* Hide the thumb */
-}
-
-.logo {
-    width: 130px;
-    left: 600px;
-    margin-bottom: 10px; 
-}
-
-.guides {
-    color: #9E8976;
-}
 
 p {
     margin: 10px 0;
@@ -101,7 +73,7 @@ p {
 }
 
 .links {
-    position: fixed;
+    position: relative;
 }
 
 .links a:hover {
@@ -110,22 +82,18 @@ p {
 
 .professional a {
     color: #C88F98;
-    position: fixed; /* Fixed position */
-    bottom: 36%;
+    position: fixed; 
+    top: 28%;
     left: 32.5%;
     transform: translate(-50%, -50%);
     font-size: 1.5vw;
     text-decoration: none;
 }
 
-.links a:hover {
-    color: #9F5561;
-}
-
 .technical a {
     color: #C88F98;
     position: fixed; /* Fixed position */
-    bottom: 28%;
+    top: 30.5%;
     right: 25%;
     transform: translate(-50%, -50%);
     font-size: 1.5vw;
@@ -145,7 +113,7 @@ p {
 .about-me a {
     color: #C88F98;
     position: fixed; /* Fixed position */
-    bottom: 41.5%;
+    top: 26%;
     right: 3%;
     transform: translate(-50%, -50%);
     font-size: 1.5vw;
@@ -173,4 +141,10 @@ p {
 .picture-wall img:hover {
   transform: scale(4);
 
+}
+
+@media only screen and (min-width: 768px) {
+    .professional a { 
+        top: 80%;
+    }
 }

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .item1 {grid-area: header;}
+        .item2 {grid-area: menu;}
+        .item3 {grid-area: main;}
+        .item4 {grid-area: footer;}
+        .item5 {grid-area: example;}
+
+        .grid-container {
+            display: grid;
+            grid-template-areas: 
+            'header header header header header header header'
+            'menu main main main main main example'
+            'menu footer footer footer footer footer example';
+            gap: 5px;
+            padding: 10px;
+            margin: 50px 100px;
+        }
+
+        .grid-container > div {
+            background-color: rgb(191, 216, 238);
+            text-align: center;
+            padding: 10px 0;
+            font-size: 20px;
+        }
+
+        .flex-container {
+            background-color: aliceblue;
+            display: flex;
+            height: 200px;
+            align-items: baseline;
+            justify-content: center;
+        }
+
+        .flex-container > div {
+            background-color: rgb(227, 205, 255);
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 30px;
+        }
+
+        /* .hero {
+            width: 1000px;
+            height: 350px;
+            background: #ff0004;
+            overflow: hidden;
+            position: absolute;
+        }
+
+        .slides{
+            display: flex;
+            width: 300%;
+        }
+
+        .image {
+            transition: 0.4s ease;
+        }
+
+        .navigator {
+            display: flex;
+            position: absolute;
+            top: 300px;
+            right: 425px;
+        }
+
+        .bar {
+            height: 5px;
+            width: 50px;
+            background: #000;
+            border: solid;
+        }
+
+        .bar:hover {
+            background: #FFFF;
+        } */
+
+
+    </style>
+</head>
+<body>
+    <!-- <div class="grid-container">
+        <div class="item1">Header</div>
+        <div class="item2">Menu</div>
+        <div class="item3">Main</div>  
+        <div class="item4">Footer</div>
+        <div class="item5">Example</div>
+      </div>
+
+      <div class="flex-container">
+        <div><h1>1</h1></div>
+        <div><h6>2</h6></div>
+        <div><h3>3</h3></div>  
+        <div><small>4</small></div> 
+      </div> -->
+
+      <div class="hero">
+        <div class="slides">
+            <input types="radio" names="selector" id="button1" checked>
+            <input types="radio" names="selector" id="button2">
+            <input types="radio" names="selector" id="button3">
+
+            <div class="image first">
+                <img src="./images/d9c2f0a0f963731aba90092a8cc60160.jpg">
+            </div>
+            <div class="image">
+                <img src="./images/background.jpeg">
+            </div>
+            <div class="image">
+                <img src="./images/background2.jpg">
+            </div>
+
+            <div class="navigator">
+                <label for="button1" class="bar"></label>
+                <label for="button2" class="bar"></label>
+                <label for="button3" class="bar"></label>
+            </div>    
+        </div>
+      </div>
+
+      
+
+</body>

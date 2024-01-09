@@ -8,7 +8,7 @@ body {
     margin: 0;
     padding: 0;
     background-image: url("../images/background2.jpg");
-    background-size: cover;
+    background-size: 650%;
     background-position: center;
     background-repeat: no-repeat;
     display: block;
@@ -68,17 +68,17 @@ img {
 
 /* page */
 
-.image-1-detail {
+/* .image-1-detail {
     position: absolute;
     top: 55%;
     left: 50%;
-    width: 19%; /* Adjust the width as needed */
-    z-index: 2; /* Place it above the main image */
-    transition: transform 0.3s; /* Add a smooth transition effect */
+    width: 19%; 
+    z-index: 2; 
+    transition: transform 0.3s; 
   }
 
   .image-1-detail:hover {
-    transform: scale(3); /* Adjust the scale as needed */
+    transform: scale(3); 
   }
 
   .images-1-detail img {
@@ -91,12 +91,12 @@ img {
     position: absolute;
     top: 28%;
     left: 58%;
-    width: 19%; /* Adjust the width as needed */
-    transition: transform 0.3s; /* Add a smooth transition effect */
+    width: 19%; 
+    transition: transform 0.3s; 
   }
 
   .image-2-detail:hover {
-    transform: scale(3); /* Adjust the scale as needed */
+    transform: scale(3); 
     z-index: 2;
   }
 
@@ -110,13 +110,13 @@ img {
     position: absolute;
     top: 31%;
     left: 36.5%;
-    width: 16%; /* Adjust the width as needed */
-    z-index: 1; /* Place it above the main image */
-    transition: transform 0.3s; /* Add a smooth transition effect */
+    width: 16%; 
+    z-index: 1; 
+    transition: transform 0.3s; 
   }
 
   .image-3-detail:hover {
-    transform: scale(3); /* Adjust the scale as needed */
+    transform: scale(3); 
     z-index: 2;
   }
 
@@ -138,7 +138,7 @@ img {
 
   .image11-1-detail:hover {
     transform: scale(3); 
-    z-index: 2;/* Adjust the scale as needed */
+    z-index: 2;
   }
 
   .images11-1-detail img {
@@ -157,7 +157,7 @@ img {
 
   .image11-2-detail:hover {
     transform: scale(3.5);
-    z-index: 2; /* Adjust the scale as needed */
+    z-index: 2; 
   }
 
   .images11-2-detail img {
@@ -177,7 +177,7 @@ img {
 
   .image11-3-detail:hover {
     transform: scale(3.5); 
-    z-index: 2;/* Adjust the scale as needed */
+    z-index: 2;
   }
 
   .images11-3-detail img {
@@ -197,7 +197,7 @@ img {
 
   .image11-4-detail:hover {
     transform: scale(3.5);
-    z-index: 2;/* Adjust the scale as needed */
+    z-index: 2;
   }
 
   .images11-4-detail img {
@@ -215,8 +215,7 @@ img {
   }
 
   .image11-5-detail:hover {
-    transform: scale(3.5); /* Adjust the scale as needed */
-  }
+    transform: scale(3.5); 
 
   .images11-5-detail img {
     width: 100%;
@@ -301,3 +300,186 @@ img {
     width: 100%;
     height: auto;
   }
+
+
+
+  .image13-1-detail {
+    position: absolute;
+    top: 29.8%;
+    left: 39%;
+    width: 12%;
+    transition: transform 0.3s;
+  }
+
+  .image13-1-detail:hover {
+    transform: scale(3.5); 
+    z-index: 2;
+  }
+
+  .images13-1-detail img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  .image13-2-detail {
+    position: absolute;
+    top: 48%;
+    left: 21.5%;
+    width: 15%;
+    transition: transform 0.3s;
+  }
+
+  .image13-2-detail:hover {
+    transform: scale(3.5); 
+  }
+
+  .images13-2-detail img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  .image13-3-detail {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 12%;
+    transition: transform 0.3s;
+  }
+
+  .image13-3-detail:hover {
+    transform: scale(3.5); 
+    z-index: 2;
+  }
+
+  .images13-3-detail img {
+    width: 100%;
+    height: auto;
+  }
+
+  .image13-4-detail {
+    position: absolute;
+    top: 60%;
+    left: 63%;
+    width: 13%;
+    transition: transform 0.3s;
+  }
+
+  .image13-4-detail:hover {
+    transform: scale(3.5); 
+    z-index: 2;
+  }
+
+  .images13-4-detail img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  .image13-5-detail {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    width: 15%;
+    transition: transform 0.3s;
+  }
+
+  .image13-5-detail:hover {
+    transform: scale(3.5); 
+    z-index: 2;
+  }
+
+  .images13-5-detail img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  .image13-6-detail {
+    position: absolute;
+    top: 33%;
+    left: 63.5%;
+    width: 15%;
+    transition: transform 0.3s;
+  }
+
+  .image13-6-detail:hover {
+    transform: scale(3.5); 
+  }
+
+  .images13-6-detail img {
+    width: 100%;
+    height: auto;
+  }
+
+  .image14-1-detail {
+    position: absolute;
+    top: 45%;
+    left: 22%;
+    width: 17%;
+    transition: transform 0.3s;
+  }
+
+  .image14-1-detail:hover {
+    transform: scale(3.5); 
+    z-index: 2;
+  }
+
+  .images14-1-detail img {
+    width: 100%;
+    height: auto;
+  }
+
+  .image14-2-detail {
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    width: 15%;
+    transition: transform 0.3s;
+  }
+
+  .image14-2-detail:hover {
+    transform: scale(3.5); 
+    z-index: 2;
+  }
+
+  .images14-2-detail img {
+    width: 100%;
+    height: auto;
+  }
+
+  .image14-3-detail {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    width: 15%;
+    transition: transform 0.3s;
+  }
+
+  .image14-3-detail:hover {
+    transform: scale(3.5); 
+    z-index: 2;
+  }
+
+  .images14-3-detail img {
+    width: 100%;
+    height: auto;
+  }
+
+  .image14-4-detail {
+    position: absolute;
+    top: 63%;
+    left: 63%;
+    width: 15%;
+    transition: transform 0.3s;
+  }
+
+  .image14-4-detail:hover {
+    transform: scale(3.5); 
+  }
+
+  .images14-4-detail img {
+    width: 100%;
+    height: auto;
+  } */

@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/prof.css">
     <title>Professional Skills •°. *࿐</title>
 </head>
 <body>
+    <div class="nav-btn">
+        <a href="home.html" class="button">Home</a>
+        <a href="Tech-LO.html" class="button">Learning Outcomes</a>
+    </div>
+
     <div class="diary">
         <div class="page" id="page1" style="display: block;">
-            <img src="./images/Page1.png" alt="Page 1">
+            <!-- <img src="./images/tech-week10.png" alt="Page 1">
+                <div class="image-1-detail">
+                    <img src="./images/IMG_1784.PNG">
+                </div>
+                <div class="image-2-detail">
+                    <img src="./images/IMG_1783 (1).PNG">
+                </div>
+                <div class="image-3-detail">
+                    <img src="./images/Screenshot 2023-12-01 103225.png">
+                </div> -->
             <div class="navigation">
+                <button onclick="showPage(3)" class="button">Previous</button>
+                <span style="margin: 0 370px;"></span>
                 <button onclick="showPage(2)" class="button">Next</button>
-            </div>
-        </div>
-
-        <div class="page" id="page2">
-            <img src="./images/Page2.png" alt="Page 2">
-            <div class="navigation">
-                <button onclick="showPage(1)" class="button">Previous</button>
-                <button onclick="showPage(3)" class="button">Next</button>
-            </div>
-        </div>
-
-        <div class="page" id="page3">
-            <img src="./images/Page3.png" alt="Page 3">
-            <div class="navigation">
-                <button onclick="showPage(2)" class="button">Previous</button>
-                <button onclick="showPage(3)" class="button">Next</button>
             </div>
         </div>
     </div>
@@ -48,8 +48,5 @@
         // Call showPage to ensure only the first page is displayed initially
         showPage(1);
     </script>
-    <a href="home.html" class="button">Home</a>
-    <a href="room.html" class="button">Room</a>
-    <a href="#" class="button">Learning Outcomes</a>
 </body>
 </html>
