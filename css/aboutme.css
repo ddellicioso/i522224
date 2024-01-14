@@ -6,7 +6,7 @@
   
   body {
     display: flex;
-    background: url("/images/background.jpeg");
+    background: url("../images/background.jpeg");
     background-size: cover;
   }
 
