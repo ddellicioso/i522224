@@ -1,47 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
-    <title>Technical LO •°. *࿐</title>
-</head>
-<body>
-    <div class="diary">
-        <div class="page" id="page1" style="display: block;">
-            <img src="./images/Tech-LO1.png" alt="Page 1">
-            <div class="navigation">
-                <button onclick="showPage(2)" class="button">Next</button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/techlo.css">
+        <title>Technical LO •°. *࿐</title>
+    </head>
+    <body>
+        <div class="big-cont">
+            <div class="nav-btn">
+                <a href="home.html" class="button">Home</a>
+                <a href="technical.html" class="button">Technical Skills</a>
+                <a href="professional.html" class="button">Professional Learning Outcomes</a>
             </div>
+
+            <div class="container10">
+                <div class="le left1" id="page1">
+                    <h3>Trends and Developments</h3>
+                    <p> almost everyone i know used some slideshow on their portfolio for their photos or images. since i couldn't use slideshow for my images inside the technical skills nor professional learning outcomes, i decided to use them inside my about me page. <br><br>
+                        i also noticed that there are some people uses scrollbar, but i feel like it doesn't fits my website so i don't use them; i might try to implement them the next chance i have.
+                    </p>
+                </div>
+
+                <div class="ri right2" id="page1_photos">
+                    <h4>Photos:</h4>
+                    <img src="./images/Screenshot (198) - Copy.png">
+                    <img src="./images/Screenshot (199).png">
+                    <img src="./images/Screenshot (200).png">
+                    
+                </div>
+
+                <div class="le left1" id="page2" style="display: none;">
+                    <h3>Iterative Process</h3>
+                    <p> i'm confident to say that i always asking for more feedbacks to upgrade my website. All of the feedbacks i got can be seen on my FeedPulse.  
+                        <br> i feel a bit sad because i didn't take much of a screenshot or any documentation to show this learning outcomes.
+                    </p>
+                </div>
+
+                <div class="ri1 right1" id="page2_photos" style="display: none;">
+                    <h4>Photos:</h4>
+                    <img src="./images/aboutme-removebg.png">
+                    <img src="./images/Screenshot (198).png"> <br><br>
+                    <img src="./images/Screenshot (140).png">
+                    <img src="./images/Screenshot (197).png">
+                    
+                </div>
+
+
+
+
+                <div class="le left1" id="page3" style="display: none;">
+                    <h3>Interactive Prototypes</h3>
+                    <p> i didnt specifically made an interactive prototypes but i made some sketches and wireframes on figma because i feel like it's already enough. <br><br>
+                        it's also goes the same for my group project, we decided to just make a wireframes on figma and asked some feedback then straight up implement them and made the website version. 
+                        <br><br> i personally think that it'll make the whole process faster.
+                    </p>
+                </div>
+
+                <div class="ri1 right1" id="page3_photos" style="display: none;">
+                    <h4>Photos:</h4>
+                    <img src="./images/IMG_1783 (1).PNG">
+                    <img src="./images/IMG_1784.PNG">
+                    <img src="./images/Screenshot (192).png">
+                    
+                </div>
+
+
+
+                <div class="le left1" id="page4" style="display: none;">
+                    <h3>Target Group</h3>
+                    <p> my group and i made sure that we conduct some user research such as a bunch of survey on google forms, personas, and interview. the complete version of it could be found on our GitLab.
+                    </p>
+                </div>
+
+                <div class="ri1 right1" id="page4_photos" style="display: none;">
+                    <h4>Photos:</h4>
+                    <img src="./images/Screenshot (193).png">
+                    <img src="./images/Screenshot (194).png">
+                    <img src="./images/Screenshot (195).png">
+                    <img src="./images/Screenshot (196).png">
+                    
+                </div>
+
+            </div>
+
+            <div class="navigation">
+                <button id="prev" onclick="prev(page)" class="button" disabled>Previous</button>
+                <button id="next" onclick="next(page)" class="button">Next</button>
+            </div> 
+
         </div>
 
-        <div class="page" id="page2">
-            <img src="./images/Tech-LO2.png" alt="Page 2">
-            <div class="navigation">
-                <button onclick="showPage(1)" class="button">Previous</button>
-                <button onclick="showPage(3)" class="button">Next</button>
-            </div>
-        </div>
-    </div>
-    
-    <script>
-        function showPage(pageNumber) {
-            // Hide all pages
-            var pages = document.querySelectorAll('.page');
-            pages.forEach(function(page) {
-                page.style.display = 'none';
-            });
+        <script>
+            function showPage(pageNum) {
+              document.getElementById(`page1`).style.display = pageNum === 1 ? 'block' : 'none';
+              document.getElementById(`page1_photos`).style.display = pageNum === 1 ? 'block' : 'none';
+              document.getElementById(`page2`).style.display = pageNum === 2 ? 'block' : 'none';
+              document.getElementById(`page2_photos`).style.display = pageNum === 2 ? 'block' : 'none';
+              document.getElementById(`page3`).style.display = pageNum === 3 ? 'block' : 'none';
+              document.getElementById(`page3_photos`).style.display = pageNum === 3 ? 'block' : 'none';
+              document.getElementById(`page4`).style.display = pageNum === 4 ? 'block' : 'none';
+              document.getElementById(`page4_photos`).style.display = pageNum === 4 ? 'block' : 'none';
+             
+            }
 
-            // Show the selected page
-            var selectedPage = document.getElementById('page' + pageNumber);
-            selectedPage.style.display = 'block';
-        }
+            let page = 1;
+            var pre = document.getElementById("prev")
+            var nex = document.getElementById("next")
 
-        // Call showPage to ensure only the first page is displayed initially
-        showPage(1);
-    </script>
-    <a href="home.html" class="button">Home</a>
-    <a href="room.html" class="button">Room</a>
-    <a href="technical.html" class="button">Technical</a>
-</body>
+            function next() {
+                pre.disabled = false;
+                page = page + 1;
+                // if (page >= 99) {
+                //     pre.disabled = true; 
+                // }
+                showPage(page);
+            }
+
+            function prev() {
+                nex.disabled = false;
+                page = page - 1;
+                if (page <= 1) {
+                    pre.disabled = true; 
+                }
+                showPage(page);
+            }
+
+         </script>
+    </body>
 </html>

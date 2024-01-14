@@ -7,64 +7,128 @@
     <title>Professional Skills •°. *࿐</title>
 </head>
 <body>
-    <div class="nav-btn">
-        <a href="home.html" class="button">Home</a>
+    <div class="big-cont">
+        <div class="nav-btn">
+            <a href="home.html" class="button">Home</a>
+            <a href="technical.html" class="button">Technical Skills</a>
+            <a href="Tech-LO.html" class="button">Technical Learning Outcomes</a>
+        </div>
+
+        <div class="container10">
+            <div class="le left1" id="page1">
+                <h3>Personal Leadership</h3>
+                <p>i kept myself motivated all the time by using the digital planner i have to track down what are the things i’ve done. i also put the feedbacks i got from everyone into it.
+                    <br><br>i also made sure that everyone who sees or uses my website are clear and content with what i put there because i work based from the result and feedbacks i received.
+                </p>
+            </div>
+
+            <div class="ri1 right1" id="page1_photos">
+                <h4>Photos:</h4>
+                <br><br>
+                <img src="./images/Screenshot (191).png" style="width: 50%;">
+                
+            </div>
+            
+
+            <div class="le left1" id="page2" style="display: none;">
+                <h3>Targeted Interaction</h3>
+                <p>i made sure that i did the given tasks no matter if it’s group project or my website. <br><br>
+                    For the group project, i’m glad that i did what i asked for from my teammates. <br>
+                    and when i’m done with the task, i would usually asked them if the result i give are already enough or does it need more improvement. 
+                    <br><br>so far, all my teammates confessed that i did a goodjob finishing my tasks correctly. </p>
+            </div>
+
+            <div class="ri1 right1" id="page2_photos" style="display: none;">
+                <h4>Photos:</h4>
+                <img src="./images/Screenshot (169).png">
+                <img src="./images/Screenshot (140).png">
+                <img src="./images/Screenshot 2023-12-14 115431.png">
+                <img src="./images/Screenshot (168).png">
+                
+            </div>
+
+
+
+            <div class="le left1" id="page3" style="display: none;">
+                <h3>Future Oriented Organisation</h3>
+                <p>After the tasks of the projects are given to us, my teammates and i directly organize the things we need to put inside our project. <br><br>
+                    At first we used some paper to clearly sees the important things and later on, we moved all them to a digital planner. <br>
+                    <br>
+                    For the digital planner, we all used an app called Notion to organize and assign each member.  
+                    i’m proud to say that we could be the most organized group</p>
+            </div>
+
+            <div class="ri1 right1" id="page3_photos" style="display: none;">
+                <h4>Photos:</h4>
+                <img src="./images/WhatsApp Image 2023-11-20 at 14.34.38_3ff439a7.jpg">
+                <img src="./images/WhatsApp Image 2023-11-20 at 14.35.30_984550bc.jpg">
+                <img src="./images/Screenshot (180).png">
+                
+            </div>
+
+
+
+            <div class="le left1" id="page4" style="display: none;">
+                <h3>Investigative Problem Solving</h3>
+                <p>I made sure that i atleast asked one or two feedback(s) from any teacher available.<br>
+                    Almost all the feedbacks i received have been really useful for enhancing for my portfolio, and i tried to implement them to the best i can with my skills right now. <br><br>
+                    For example here, before my diary had 2 weeks page on one view, but now i made it exclusively one view for one week with its images. <br>
+                    Also the images at first couldn’t be seen clearly so i made it hoverable and it can zoomed in automatically.
+                </p>
+            </div>
+
+            <div class="ri1 right1" id="page4_photos" style="display: none;">
+                <h4>Photos:</h4>
+                <img src="./images/tech-week10&11.png"> <br>
+                <img src="./images/tech-week10.png">
+                <img src="./images/tech-week11.png">
+                
+            </div>
+
+        </div>
+
+        <div class="navigation">
+            <button id="prev" onclick="prev(page)" class="button" disabled>Previous</button>
+            <button id="next" onclick="next(page)" class="button">Next</button>
+        </div> 
+
     </div>
 
-    <div class="container">
-        <div class="slides">
-            <input type="radio" name="common" id="btn1" checked>
-            <input type="radio" name="common" id="btn2">
-
-            <div class="image first">
-               <img src="./images/profLO1.png" alt="Page 1">
-            </div>
-            <div class="image">
-                <img src="./images/profLO2.png">
-            </div>
-                
-            
-            <div class="navigator">
-                <label for="btn1" class="bar"></label>
-                <label for="btn2" class="bar"></label>
-            </div>
-            <!-- <div class="navigation">
-                <button onclick="showPage(2)" class="button">Previous</button>
-                <span style="margin: 0 370px;"></span>
-                <button onclick="showPage(2)" class="button">Next</button>
-            </div> -->
-        </div>
-    </div>
-
-    <!-- <div class="diary">
-        <div class="page" id="page2" style="display: block;">
-            <img src="./images/profLO2.png" alt="Page 2">
-            
-                
-            <div class="navigation">
-                <button onclick="showPage(1)" class="button">Previous</button>
-                <span style="margin: 0 370px;"></span>
-                <button onclick="showPage(1)" class="button">Next</button>
-            </div>
-        </div>
-    </div> -->
-    
-    
-    <!-- <script>
-        function showPage(pageNumber) {
-            // Hide all pages
-            var pages = document.querySelectorAll('.page');
-            pages.forEach(function(page) {
-                page.style.display = 'none';
-            });
-
-            // Show the selected page
-            var selectedPage = document.getElementById('page' + pageNumber);
-            selectedPage.style.display = 'block';
+    <script>
+        function showPage(pageNum) {
+          document.getElementById(`page1`).style.display = pageNum === 1 ? 'block' : 'none';
+          document.getElementById(`page1_photos`).style.display = pageNum === 1 ? 'block' : 'none';
+          document.getElementById(`page2`).style.display = pageNum === 2 ? 'block' : 'none';
+          document.getElementById(`page2_photos`).style.display = pageNum === 2 ? 'block' : 'none';
+          document.getElementById(`page3`).style.display = pageNum === 3 ? 'block' : 'none';
+          document.getElementById(`page3_photos`).style.display = pageNum === 3 ? 'block' : 'none';
+          document.getElementById(`page4`).style.display = pageNum === 4 ? 'block' : 'none';
+          document.getElementById(`page4_photos`).style.display = pageNum === 4 ? 'block' : 'none';
+         
         }
 
-        // Call showPage to ensure only the first page is displayed initially
-        showPage(1);
-    </script> -->
+        let page = 1;
+        var pre = document.getElementById("prev")
+        var nex = document.getElementById("next")
+
+        function next() {
+            pre.disabled = false;
+            page = page + 1;
+            // if (page >= 99) {
+            //     pre.disabled = true; 
+            // }
+            showPage(page);
+        }
+
+        function prev() {
+            nex.disabled = false;
+            page = page - 1;
+            if (page <= 1) {
+                pre.disabled = true; 
+            }
+            showPage(page);
+        }
+
+     </script>
 </body>
 </html>

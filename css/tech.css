@@ -1,486 +1,207 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 @font-face {
-    font-family: 'EB Garamond';
-    src: url("/fonts/EB_Garamond/EBGaramond-VariableFont_wght.ttf");
+  font-family: 'Bandi'; /* Choose a name for your font */
+  src: url('/fonts/core-bandi-face.ttf') format('ttf'); /* Specify the path to your font file and its format */
 }
 
 body {
-    font-family: 'EB Garamond', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url("../images/background2.jpg");
-    background-size: 600%;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: block;
-    min-height: 600px; /* Adjust the minimum height as needed */
-    min-width: 800px;
+  font-family: 'Bandi', cursive;
+  font-size: 86.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("/images/background.jpeg");
+  background-size: cover;
 }
 
-.diary {
-    width: 70%;
-    margin: 20px auto;
-    overflow: hidden; /* Hide overflowing content */
+.big-cont {
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
 }
 
-.page {
-    display: none;
+.container10 {
+  background: url("/images/notebook.png");
+  background-repeat: no-repeat;
+  align-self: center;
+  justify-self: center;
+  margin-top: 3%;
+  width: 800px;
+  height: 520px;
+  background-size: 100%;
+  display: flex;
+  flex-direction: row;
+  
 }
 
-.page:target {
-    display: block;
+.left1 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
 }
 
-img {
-    width: 80%;
-    height: auto;
-    margin-left: 10%;
-    /* margin-right: auto; */
+h3 {
+  color: #7f5342;
+  margin-top: 18%;
+  margin-left: 40%;
+  font-size: 1.5vw;
+}
+
+
+.left1 p{
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 15%;
+  font-size: 90%;
+}
+
+.ri1 {
+  margin-left: 10%;
+}
+.right1 {
+  color: #7f5342;
+  margin-top: 6%;
+  margin-left: 1%;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  text-align: center;
+}
+
+.right1 img {
+  margin-top: 5%;
+  width: 40%;
+  transition: transform 0.4s ease;
+}
+
+.right1 img:hover {
+  transform: scale(4);
+}
+
+h4 {
+  margin-top: 10%;
+}
+
+h2 {
+  color: #8a3434;
+  margin-top: 50%;
+  margin-left: 10%;
+  cursor: pointer;
+}
+
+h2:hover .christmas {
+  animation: glow 1s infinite alternate; /* Apply the glow animation on hover */
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px #75ed75, 0 0 30px #00ff00, 0 0 40px #00ff00; /* Initial text-shadow properties */
+  }
+  to {
+      text-shadow: 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00; /* Final text-shadow properties */
+  }
+}
+
+p {
+  color: #855e4f;
+}
+.christmas {
+  color: green;
+}
+
+
+/* .left2 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.left2 p{
+  color: #855e4f;
+  margin-top: 7%;
+  margin-left: 10%;
+  margin-right: 15%;
+  font-size: 90%;
+}
+
+.right2 {
+  color: #7f5342;
+  margin-top: 10%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+.right2 img {
+  margin-top: 5%;
+  width: 70%;
+  transition: transform 0.4s ease;
+}
+
+.right2 img:hover {
+  transform: scale(4);
+} */
+
+
+.nav-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3%;
 }
 
 .navigation {
-    margin-top: 1px;
-    text-align: center;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  gap: 85%;
 }
 
 .button {
-    display: inline-block;
-    padding: 5px 5px;
-    background-color: #ffffff7b;
-    color: #8a3434;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+  display: inline-block;
+  padding: 5px 5px;
+  background-color: #ffffff7b;
+  color: #8a3434;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
 .button:hover {
-    background-color: #9a90904c;
-}
-
-.nav-btn {
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
-    margin-top: 20px;
-    margin-left: 25%;
-        
+  background-color: #9a90904c;
 }
 
 
-/* page */
 
-.image-1-detail {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    width: 19%; 
-    z-index: 2; 
-    transition: transform 0.3s; 
+@media only screen and (max-width: 600px) {
+  .container10 {
+    width: 80%;
+    height: 280px;
   }
-
-  .image-1-detail:hover {
-    transform: scale(3); 
-  }
-
-  .images-1-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-  .image-2-detail {
-    position: absolute;
-    top: 28%;
-    left: 58%;
-    width: 19%; 
-    transition: transform 0.3s; 
-  }
-
-  .image-2-detail:hover {
-    transform: scale(3); 
-    z-index: 2;
-  }
-
-  .images-2-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-  .image-3-detail {
-    position: absolute;
-    top: 31%;
-    left: 36.5%;
-    width: 16%; 
-    z-index: 1; 
-    transition: transform 0.3s; 
-  }
-
-  .image-3-detail:hover {
-    transform: scale(3); 
-    z-index: 2;
-  }
-
-  .images-3-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-
-  .image11-1-detail {
-    position: absolute;
-    top: 43%;
-    left: 31%;
-    width: 21%;
-    transition: transform 0.3s;
-    z-index: 0;
-  }
-
-  .image11-1-detail:hover {
-    transform: scale(3); 
-    z-index: 2;
-  }
-
-  .images11-1-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-  .image11-2-detail {
-    position: absolute;
-    top: 25%;
-    left: 49%;
-    width: 16%;
-    transition: transform 0.3s;
-  }
-
-  .image11-2-detail:hover {
-    transform: scale(3.5);
-    z-index: 2; 
-  }
-
-  .images11-2-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-
-  .image11-3-detail {
-    position: absolute;
-    top: 24.5%;
-    left: 64%;
-    width: 14%;
-    transition: transform 0.3s;
-  }
-
-  .image11-3-detail:hover {
-    transform: scale(3.5); 
-    z-index: 2;
-  }
-
-  .images11-3-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-
-  .image11-4-detail {
-    position: absolute;
-    top: 53%;
-    left: 49.6%;
-    width: 13%;
-    transition: transform 0.3s;
-  }
-
-  .image11-4-detail:hover {
-    transform: scale(3.5);
-    z-index: 2;
-  }
-
-  .images11-4-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-  .image11-5-detail {
-    position: absolute;
-    top: 53%;
-    left: 62%;
-    width: 16%;
-    transition: transform 0.3s;
-  }
-
-  .image11-5-detail:hover {
-    transform: scale(3.5); 
-  }
-
-  .images11-5-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-
-
-.image12-1-detail {
-    position: absolute;
-    top: 38%;
-    left: 48%;
-    width: 18%;
-    transition: transform 0.3s;
-  }
-
-  .image12-1-detail:hover {
-    transform: scale(3.5); 
-    z-index: 2;
-  }
-
-  .images12-1-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-
-  .image12-2-detail {
-    position: absolute;
-    top: 52.6%;
-    left: 48%;
-    width: 18%;
-    transition: transform 0.3s;
-  }
-
-  .image12-2-detail:hover {
-    transform: scale(3.5);
-    z-index: 2;
-  }
-
-  .images12-2-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-
-  .image12-3-detail {
-    position: absolute;
-    top: 29.7%;
-    left: 63%;
-    width: 16%;
-    transition: transform 0.3s;
-  }
-
-  .image12-3-detail:hover {
-    transform: scale(3.5);
-    z-index: 2; 
-  }
-
-  .images12-3-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-  .image12-4-detail {
-    position: absolute;
-    top: 52.6%;
-    left: 63%;
-    width: 15%;
-    transition: transform 0.3s;
-  }
-
-  .image12-4-detail:hover {
-    transform: scale(3.5); 
-  }
-
-  .images12-4-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-
-  .image13-1-detail {
-    position: absolute;
-    top: 29.8%;
-    left: 39%;
-    width: 12%;
-    transition: transform 0.3s;
-  }
-
-  .image13-1-detail:hover {
-    transform: scale(3.5); 
-    z-index: 2;
-  }
-
-  .images13-1-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-  .image13-2-detail {
-    position: absolute;
-    top: 48%;
-    left: 21.5%;
-    width: 15%;
-    transition: transform 0.3s;
-  }
-
-  .image13-2-detail:hover {
-    transform: scale(3.5); 
-  }
-
-  .images13-2-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-  .image13-3-detail {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    width: 12%;
-    transition: transform 0.3s;
-  }
-
-  .image13-3-detail:hover {
-    transform: scale(3.5); 
-    z-index: 2;
-  }
-
-  .images13-3-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-  .image13-4-detail {
-    position: absolute;
-    top: 60%;
-    left: 63%;
-    width: 13%;
-    transition: transform 0.3s;
-  }
-
-  .image13-4-detail:hover {
-    transform: scale(3.5); 
-    z-index: 2;
-  }
-
-  .images13-4-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-  .image13-5-detail {
-    position: absolute;
-    top: 33%;
-    left: 50%;
-    width: 15%;
-    transition: transform 0.3s;
-  }
-
-  .image13-5-detail:hover {
-    transform: scale(3.5); 
-    z-index: 2;
-  }
-
-  .images13-5-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-
-  .image13-6-detail {
-    position: absolute;
-    top: 33%;
-    left: 63.5%;
-    width: 15%;
-    transition: transform 0.3s;
-  }
-
-  .image13-6-detail:hover {
-    transform: scale(3.5); 
-  }
-
-  .images13-6-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-  .image14-1-detail {
-    position: absolute;
-    top: 45%;
-    left: 22%;
-    width: 17%;
-    transition: transform 0.3s;
-  }
-
-  .image14-1-detail:hover {
-    transform: scale(3.5); 
-    z-index: 2;
-  }
-
-  .images14-1-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-  .image14-2-detail {
-    position: absolute;
-    top: 32%;
-    left: 50%;
-    width: 15%;
-    transition: transform 0.3s;
+  h4 {
+    font-size: 1.3vw;
   }
-
-  .image14-2-detail:hover {
-    transform: scale(3.5); 
-    z-index: 2;
-  }
-
-  .images14-2-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-  .image14-3-detail {
-    position: absolute;
-    top: 63%;
-    left: 50%;
-    width: 15%;
-    transition: transform 0.3s;
+  h3 {
+      font-size: 1.5vw;
   }
-
-  .image14-3-detail:hover {
-    transform: scale(3.5); 
-    z-index: 2;
-  }
-
-  .images14-3-detail img {
-    width: 100%;
-    height: auto;
-  }
-
-  .image14-4-detail {
-    position: absolute;
-    top: 63%;
-    left: 63%;
-    width: 15%;
-    transition: transform 0.3s;
+  .le p{
+    margin-top: 8%;
+    font-size: 1.2vw;
+    margin-right: 2%;
   }
 
-  .image14-4-detail:hover {
-    transform: scale(3.5); 
+  .button {
+    font-size: 1.5vw;
   }
 
-  .images14-4-detail img {
-    width: 100%;
-    height: auto;
+  .navigation {
+    margin-left: 10%;
+    gap: 73%;
   }
+  
+}

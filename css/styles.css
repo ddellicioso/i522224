@@ -7,12 +7,11 @@ body {
     font-family: 'EB Garamond', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url("../images/background2.jpg");
+    background-image: url("../images/background.jpeg");
     background-size: 100%;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     display: block;
-    min-height: 600px;
-    min-width: 800px; 
+
 }
 
 /* .button {
@@ -88,6 +87,11 @@ p {
     transform: translate(-50%, -50%);
     font-size: 1.5vw;
     text-decoration: none;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .technical a {
@@ -98,6 +102,11 @@ p {
     transform: translate(-50%, -50%);
     font-size: 1.5vw;
     text-decoration: none;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .sources a {
@@ -108,6 +117,11 @@ p {
     transform: translate(-50%, -50%);
     font-size: 1.5vw;
     text-decoration: none;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .about-me a {
@@ -118,6 +132,11 @@ p {
     transform: translate(-50%, -50%);
     font-size: 1.5vw;
     text-decoration: none;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .aboutme {
@@ -143,8 +162,66 @@ p {
 
 }
 
-/* @media only screen and (min-width: 768px) {
+.cat img {
+    width: 35px;
+    height: auto;
+    position: absolute;
+    animation: moveAround 50s linear infinite; /* Adjust the duration and timing function as needed */
+  }
+
+
+@keyframes moveAround {
+    0% { transform: translate(65vw, 10vh); }
+    25% { transform: translate(20vw, 90vh); } /* 80% of viewport width and 60% of viewport height */
+    50% { transform: translate(50vw, 0); } 
+    75% { transform: translate(55vw, 90vh); } /* 80% of viewport width and 60% of viewport height in the opposite direction */
+    100% { transform: translate(65vw, 0); }
+  }
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    
     .professional a { 
-        top: 80%;
+        top: 30%;
+        left: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2px;
+        width: 43px;
+        font-size: 1.5vw;
     }
-} */
+
+    .technical a {
+        top: 32%;
+        left: 66%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2px;
+        width: 43px;
+    }
+
+    .sources a {
+        top: 15%;
+        left: 55%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2px;
+        width: 43px;  
+    }
+
+    .about-me a {
+        top: 30%;
+        left: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2px;
+        width: 43px;  
+    }
+}
