@@ -163,6 +163,21 @@ p {
     border-radius: 5px;
 }
 
+.game a{
+    color: #C88F98;
+    position: fixed; /* Fixed position */
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5vw;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+}
+
 
 .picture-wall img {
   margin-top: 5%;
@@ -247,5 +262,19 @@ p {
         align-items: center;
         height: 2px;
         width: 43px; 
+    }
+
+    .game a{
+        top: 20%;
+        left: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2px;
+        width: 43px; 
+    }
+
+    .cat img{
+        width: 3%;
     }
 }

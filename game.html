@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: white;
+        }
+
+        #game-board {
+            display: grid;
+            grid-template-columns: repeat(6, 100px);
+            gap: 10px;
+        }
+
+        .card {
+            width: 80px;
+            height: 100px;
+            background-color: pink;
+            border-radius: 5px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card.flipped {
+            transform: rotateY(180deg);
+            background-color: palevioletred;
+        }
+
+        .emoji {
+            display: none;
+        }
+
+        #countdown-display {
+            margin-bottom: 20px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        #mismatch-display {
+            margin-bottom: 10px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        #notification {
+            font-size: 24px;
+            text-align: center;
+            display: none;
+            color: #e74c3c;
+            margin-top: 2%;
+        }
+
+        .notifs {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border: 2px solid #e9adbf;
+            background-color: #e9adbf;
+            border-radius: 5px;
+            width:610px;
+            height: 25px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            .card {
+                width: 60px;
+            }
+
+            #game-board {
+                margin-left: 30px;
+                gap: 5px;
+                grid-template-columns: repeat(6, 60px);
+            }
+
+            .notifs {
+                margin-left: 30px;
+                width: 362px;
+            }
+
+            #countdown-display {
+                font-size: 15px;
+                text-align: center;
+            }
+
+            #mismatch-display {
+                margin-bottom: 10px;
+                font-size: 12px;
+                text-align: center;
+            }
+
+            #notification {
+                font-size: 24px;
+                text-align: center;
+                display: none;
+                color: #e74c3c;
+                margin-top: 2%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div id="notification"></div>
+        <div class="notifs">
+            <div id="countdown-display"></div>
+            <div id="mismatch-display"></div> 
+        </div>
+        
+        <div id="game-board"></div>    
+    </div>
+    
+
+    <script>
+        const emojis = ['🐱', '🐶', '🐰', '🐼', '🐻', '🐨', '🐯', '🦁', '🐷', '🐸', '🐙', '🦊'];
+        const cards = emojis.concat(emojis); // Duplicate emojis to create pairs
+        const gameBoard = document.getElementById('game-board');
+        const countdownDisplay = document.getElementById('countdown-display');
+        const mismatchDisplay = document.getElementById('mismatch-display');
+        const notification = document.getElementById('notification');
+        let countdown = 2;
+        let countdownInterval;
+        let flippedCards = [];
+        let mismatchCount = 0;
+        let canFlip = true;
+
+        // Display initial countdown value
+        updateCountdownDisplay();
+
+        // Shuffle the cards using Fisher-Yates algorithm
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        shuffle(cards);
+
+        // Create and append card elements to the game board
+        cards.forEach((emoji, index) => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+            card.dataset.index = index;
+            card.innerHTML = `<span class="emoji">${emoji}</span>`;
+            card.addEventListener('click', flipCard);
+            gameBoard.appendChild(card);
+        });
+
+        function startCountdown() {
+            countdownInterval = setInterval(() => {
+                countdown--;
+
+                if (countdown <= 0) {
+                    clearInterval(countdownInterval);
+                    countdownDisplay.textContent = 'Time is up!';
+                    canFlip = false; // Prevent further flips
+                    showNotification('You ran out of time. Game over!');
+                } else {
+                    updateCountdownDisplay();
+                }
+            }, 1000);
+        }
+
+        function updateCountdownDisplay() {
+            countdownDisplay.textContent = `Time left: ${countdown} seconds`;
+        }
+
+        function showNotification(message) {
+            notification.textContent = message;
+            notification.style.display = 'block';
+        }
+
+        function hideNotification() {
+            notification.style.display = 'none';
+        }
+
+        function updateMismatchDisplay() {
+            mismatchDisplay.textContent = `Mismatch count: ${mismatchCount}`;
+        }
+
+        function flipCard() {
+            if (!canFlip) return;
+
+            const card = this;
+
+            if (!card.classList.contains('flipped') && flippedCards.length < 2) {
+                card.classList.add('flipped');
+                showEmoji(card);
+                flippedCards.push(card);
+
+                if (flippedCards.length === 2) {
+                    setTimeout(checkMatch, 500);
+                }
+            }
+        }
+
+        function showEmoji(card) {
+            const emoji = card.querySelector('.emoji');
+            emoji.style.display = 'block';
+        }
+
+        function checkMatch() {
+        const [card1, card2] = flippedCards;
+        const isMatch = card1.querySelector('.emoji').textContent === card2.querySelector('.emoji').textContent;
+
+        if (!isMatch) {
+            mismatchCount++;
+            updateMismatchDisplay();
+            setTimeout(() => {
+                card1.classList.remove('flipped');
+                card2.classList.remove('flipped');
+                hideEmojis(card1);
+                hideEmojis(card2);
+                flippedCards = [];
+            }, 500);
+        } else {
+            flippedCards = [];
+        }
+
+        if (document.querySelectorAll('.flipped').length === cards.length) {
+            clearInterval(countdownInterval);
+            countdownDisplay.textContent = 'Congratulations! You matched all pairs!';
+        }
+    }
+
+    function hideEmojis(card) {
+        const emoji = card.querySelector('.emoji');
+        emoji.style.display = 'none';
+    }
+
+        // Start the countdown immediately
+        startCountdown();
+    </script>
+</body>
+</html>
