@@ -33,7 +33,7 @@
 }
 .navigator .bar {
     height: 9px;
-    width: 45px;
+    width: 40px;
     background: pink;
     cursor: pointer;
     border: 2px solid black;
@@ -105,6 +105,28 @@ img {
     transition: background-color 0.3s;
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(211, 211, 211, 0.564);
+}
+
 
 @media only screen and (max-width: 600px) {
     .nav-btn {
@@ -112,12 +134,15 @@ img {
     }
 
     .container {
+        width: 30%;
+        height: 40%;
         margin-top: 10%;
-        left: 28%;
+        left: 20%;
     }
 
     .me-cont {
-        margin-top: 40%;
-        margin-left: 12%;
+        margin-top: 45%;
+        margin-left: 30%;
+        width: 40%;
     }
 }
